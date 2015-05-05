@@ -85,20 +85,20 @@ int main()
     cout << " Vertice de maximo coste en H: " << verticeMaxCoste(H) << endl;
 
     cout << endl << " Vertices inaccesibles en G: "; 
-    inaccesibles(G);
+    //inaccesibles(G);
 
     cout << endl << " Recorrido en anchura de H desde el vertice Huelva:  ";
-    recorrido_anchura(H, string("Huelva"));
+    //recorrido_anchura(H, string("Huelva"));
 
     cout << endl << " Caminos acotados en G a coste 9 desde el vertice 2:" << endl;  
-    caminosAcotados(G, 2, 9);
+    //caminosAcotados(G, 2, 9);
 
     cout << endl << endl << " Vertice outConectado en G: " << outConectado(G);
     cout << endl << " Vertice outConectado en H: " << outConectado(H);
     
     cout << endl << endl << " Recorrido en profundidad de H desde el vertice Huelva:  ";
-    recorrido_profundidad(H, string("Huelva"));
-    cout << endl << endl;
+    //recorrido_profundidad(H, string("Huelva"));
+    //cout << endl << endl;
     
     system("PAUSE");
     return 0;
