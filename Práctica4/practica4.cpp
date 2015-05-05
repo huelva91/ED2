@@ -12,6 +12,29 @@ using namespace std;
 template <typename T>
 T verticeMaxCoste(const Grafo<T, float>& G)
 {
+	map<T,float> coste; //Crear diccionario
+        T v;
+        Conjunto<Vertice<T> > cv;
+        cv=G.vertices();
+        while(!cv.esVacio()){
+             v=cv.quitar().getObj();
+             coste[v]=0;                      
+        }
+        Conjunto<Arista<T,float> > A=G.aristas();
+        while(!A.esVacio()){
+             Arista<T,float> AR=A.quitar();
+             coste[AR.getOrigen() ]+=AR.getEtiqueta();              
+        }
+        float maxcoste=0;
+        typename map<T,float>::iterator VerMax;
+        for(typename map<T,float>::iterator it=coste.begin(); it!=coste.end(); it++){
+              if(it->second>maxcoste){
+                     maxcoste=it->second;
+                     VerMax=it;
+              }       
+        }
+        return VerMax->first;
+        //commit
 }    
 
 
