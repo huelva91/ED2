@@ -98,7 +98,7 @@ int main()
     H.insertarArista("Mazagon", "Matalascañas", 4);    
     H.insertarArista("Aljaraque", "Mazagon", 5);    
     H.insertarArista("Almonte", "Huelva", 6);    
-    //Comentario random
+    
     Grafo<int, float> H2;
     H2.insertarVertice(1);
     cout<<" Numero de vertices de H2: "<< H2.numVertices() << endl << endl;
